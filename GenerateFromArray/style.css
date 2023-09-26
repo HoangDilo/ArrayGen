@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800;900&display=swap');
+
+.header {
+    display: flex;
+    gap: 40px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-weight: 600;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.images {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.biggercards {
+    width: 220px;
+    height: 280px;
+    position: relative;
+    background-color: rgb(177, 93, 255);
+    border-radius: 8px;
+}
+
+.cards {
+    position: absolute;
+    top: 65px;
+    left: 30px;
+}
+
+.names {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
