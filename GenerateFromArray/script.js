@@ -20,7 +20,8 @@ const array = [
         src: './Assets/reactjs.svg',
     }
 ]
-const DOM = document.querySelector('.header')
+const DOM = document.querySelector('.header');
+
 function Generate() {
     //console.log(DOM);
     for(let item of array) {
