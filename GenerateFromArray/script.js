@@ -20,10 +20,10 @@ const array = [
         src: './Assets/reactjs.svg',
     }
 ]
-const DOM = document.querySelector('.header');
+const DOM = document.querySelector('.list');
 
 function Generate() {
-    //console.log(DOM);
+    console.log(DOM);
     for(let item of array) {
         const biggercards = document.createElement('div');
         biggercards.className = 'biggercards';
@@ -48,6 +48,9 @@ function Generate() {
         biggercards.appendChild(cards);
 
         DOM.appendChild(biggercards);
+
         console.log(DOM);
     }
 }
+
+Generate();
