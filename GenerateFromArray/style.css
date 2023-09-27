@@ -473,7 +473,6 @@ button:active {
     padding-top: 70px;
     display: flex;
     justify-content: center;
-    text-transform: none;
     flex-direction: column;
     align-items: center;
 }
@@ -494,6 +493,7 @@ button:active {
 .text-4 {
     font-size: 18px;
     color: #2B2C34;
+    text-transform: none;
 }
 
 .brands {
@@ -512,21 +512,41 @@ button:active {
     flex-direction: column;
     gap: 25px;
     align-items: flex-start;
+    text-transform: none;
 }
 
 .col-title {
     font-size: 20px;
     font-weight: 700;
+    min-width: fit-content;
+    text-transform: none;
 }
 
 .col-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    font-size: 18px;
 }
+.col-list > p {
+    text-transform: none;
 
+}
 .line-1 {
     width: 1250px;
     height: 1px;
     background: #C0C0C0;
+    margin-bottom: 26px;
+}
+
+.final-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.container-container-6 {
+    width: 1250px;
+    padding-bottom: 26px;
 }
