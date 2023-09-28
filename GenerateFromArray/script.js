@@ -23,7 +23,19 @@ const array = [
 const email_DOM_1 = document.querySelectorAll('.email')[0];
 const email_DOM_2 = document.querySelectorAll('.email')[1];
 const toast_list_DOM = document.querySelector('.toast-message-list');
+const DOM = document.getElementsByTagName('html')[0];
 
+function handleScroll() {
+    st = DOM.scrollTop
+    if (st > 200) document.getElementById('go-to-top').className = '';
+    else document.getElementById('go-to-top').className = 'hidden';
+}
+function goTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+}
 function Generate(parent, arr) {
     const DOM = document.querySelector(parent);
     //console.log(DOM);

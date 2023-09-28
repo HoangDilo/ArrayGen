@@ -15,6 +15,19 @@ body {
     margin: 0;
 }
 
+#go-to-top.hidden {
+    visibility: hidden;
+}
+#go-to-top {
+    padding: 0;
+    margin: 0;
+    border-radius: 8px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10;
+}
+
 p {
     margin: 0;
 }
