@@ -1,3 +1,9 @@
+const email_DOM_1 = document.querySelectorAll('.email')[0];
+const email_DOM_2 = document.querySelectorAll('.email')[1];
+const toast_list_DOM = document.querySelector('.toast-message-list');
+const DOM = document.getElementsByTagName('html')[0];
+const ss1_DOM = document.querySelector('.session-1');
+
 const array = [
     {
         name: 'CSS',
@@ -20,23 +26,188 @@ const array = [
         src: './Assets/reactjs.svg',
     }
 ]
-const email_DOM_1 = document.querySelectorAll('.email')[0];
-const email_DOM_2 = document.querySelectorAll('.email')[1];
-const toast_list_DOM = document.querySelector('.toast-message-list');
-const DOM = document.getElementsByTagName('html')[0];
+
+const post_array = [
+    {
+        category: 'featured_article',
+        image: "./Assets/picture_1.svg",
+        title: 'Fundamental of javascript',
+        author_img: "./Assets/theauthor.svg",
+        author_name: "Dasteen",
+        date: 'Jan 10, 2022',
+        length: '3 min read'
+    },
+    {
+        category: 'featured_article',
+        image: "./Assets/picture_2.svg",
+        title: 'Grid CSS make your life easier',
+        author_img: "./Assets/theauthor.svg",
+        author_name: "Dasteen",
+        date: 'Jan 10, 2022',
+        length: '3 min read'
+    },
+    {
+        category: 'featured_article',
+        image: "./Assets/picture_3.svg",
+        title: 'Make animated light mode and dark mode toggle with CSS',
+        author_img: "./Assets/theauthor.svg",
+        author_name: "Dasteen",
+        date: 'Jan 10, 2022',
+        length: '3 min read'
+    },
+    {
+        category: 'featured_article',
+        image: "./Assets/picture_4.svg",
+        title: 'Make tic tac toe games with react JS',
+        author_img: "./Assets/theauthor.svg",
+        author_name: "Dasteen",
+        date: 'Jan 10, 2022',
+        length: '3 min read'
+    },
+    {
+        category: 'CSS',
+        image: "./Assets/picture_5.svg",
+        title: 'Flexbox cSS : Everything you need to know',
+        author_img: "./Assets/theauthor.svg",
+        author_name: "Dasteen",
+        date: 'Jan 10, 2022',
+        length: '3 min read'
+    },
+    {
+        category: 'CSS',
+        image: "./Assets/picture_2.svg",
+        title: 'Grid CSS make your life easier',
+        author_img: "./Assets/theauthor.svg",
+        author_name: "Dasteen",
+        date: 'Jan 10, 2022',
+        length: '3 min read'
+    },
+    {
+        category: 'CSS',
+        image: "./Assets/picture_7.svg",
+        title: '3 easy way to make div center',
+        author_img: "./Assets/theauthor.svg",
+        author_name: "Dasteen",
+        date: 'Jan 10, 2022',
+        length: '3 min read'
+    },
+    {
+        category: 'CSS',
+        image: "./Assets/picture_3.svg",
+        title: 'Make animated light mode and dark mode toggle with CSS',
+        author_img: "./Assets/theauthor.svg",
+        author_name: "Dasteen",
+        date: 'Jan 10, 2022',
+        length: '3 min read'
+    },
+    {
+        category: 'JS',
+        image: "./Assets/picture_8.svg",
+        title: 'array in javasript - Learn JS #3',
+        author_img: "./Assets/theauthor.svg",
+        author_name: "Dasteen",
+        date: 'Jan 10, 2022',
+        length: '3 min read'
+    },
+    {
+        category: 'JS',
+        image: "./Assets/picture_1.svg",
+        title: 'Fundamental of javascript',
+        author_img: "./Assets/theauthor.svg",
+        author_name: "Dasteen",
+        date: 'Jan 10, 2022',
+        length: '3 min read'
+    },
+    {
+        category: 'JS',
+        image: "./Assets/picture_9.svg",
+        title: '7 project with javascript you must try for your portfolio',
+        author_img: "./Assets/theauthor.svg",
+        author_name: "Dasteen",
+        date: 'Jan 10, 2022',
+        length: '3 min read'
+    },
+    {
+        category: 'JS',
+        image: "./Assets/picture_10.svg",
+        title: 'make simple calculator with javascript',
+        author_img: "./Assets/theauthor.svg",
+        author_name: "Dasteen",
+        date: 'Jan 10, 2022',
+        length: '3 min read'
+    },
+    {
+        category: 'ReactJS',
+        image: "./Assets/picture_11.svg",
+        title: 'first month of leaning react jS',
+        author_img: "./Assets/theauthor.svg",
+        author_name: "Dasteen",
+        date: 'Jan 10, 2022',
+        length: '3 min read'
+    },
+    {
+        category: 'ReactJS',
+        image: "./Assets/picture_12.svg",
+        title: 'build markdown editor with react JS',
+        author_img: "./Assets/theauthor.svg",
+        author_name: "Dasteen",
+        date: 'Jan 10, 2022',
+        length: '3 min read'
+    },
+    {
+        category: 'ReactJS',
+        image: "./Assets/picture_13.svg",
+        title: '3 easy way to make div center',
+        author_img: "./Assets/theauthor.svg",
+        author_name: "Dasteen",
+        date: 'Jan 10, 2022',
+        length: '3 min read'
+    },
+    {
+        category: 'ReactJS',
+        image: "./Assets/picture_4.svg",
+        title: 'Make tic tac toe games with react JS',
+        author_img: "./Assets/theauthor.svg",
+        author_name: "Dasteen",
+        date: 'Jan 10, 2022',
+        length: '3 min read'
+    },
+];
+
+const categories = [
+    {
+        id: 'featured_article',
+        label: 'Featured Article',
+    },
+    {
+        id: 'CSS',
+        label: 'CSS',
+    },
+    {
+        id: 'JS',
+        label: 'Javascript',
+    },
+    {
+        id: 'ReactJS',
+        label: 'React JS',
+    }
+]
 
 function handleScroll() {
     st = DOM.scrollTop
     if (st > 200) document.getElementById('go-to-top').className = '';
     else document.getElementById('go-to-top').className = 'hidden';
 }
+
 function goTop() {
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     })
 }
+
 function Generate(parent, arr) {
+    console.log('generating array');
     const DOM = document.querySelector(parent);
     //console.log(DOM);
     for (let item of arr) {
@@ -68,8 +239,53 @@ function Generate(parent, arr) {
     }
 }
 
-Generate('.list', array);
+function renderInsideElement(parent_selector) {
+    const parentEl_DOM = document.querySelector(`#${parent_selector}`);
+    //  let test_DOM = '';
 
+    let items_strings = filterByCategory(post_array, parent_selector).map(item => `
+                <div class="cards-2">
+                    <div class="imgs-container">
+                        <img src="${item.image}" alt="" class="img">
+                        <p>${item.title}</p>
+                    </div>
+                    <div class="users">
+                        <img src="${item.author_img}" alt="" class="author">
+                        <div class="author-info">
+                            <div class="author-name">
+                                ${item.author_name}
+                            </div>
+                            <div class="date-time">
+                                ${item.date} <span class="the-other-dots">∙</span> ${item.length}
+                            </div>
+                        </div>
+                    </div>
+                </div>`).join('');
+
+    parentEl_DOM.innerHTML = `
+            <div class="category-container">
+                <div class="category-title">
+                    <div class="browse-category">
+                            ${categories.find(item => item.id == parent_selector).label}
+                        <img src="./Assets/line.svg" alt="" style="width: 35px">
+                    </div>
+                    <div class="see-all">
+                        <p>See All Article</p>
+                        <div class="arrow-container">
+                            <img src="./Assets/arrow.svg" alt="" class="arrow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-post">
+    ` + items_strings + '</div>'
+
+}
+
+function filterByCategory(arr, category) {
+    return arr.filter(item =>
+        item.category == category)
+}
 
 function validate(element_selector_index, type) {
     switch (type) {
@@ -170,3 +386,15 @@ function handleFocus(element, type) {
             break;
     }
 }
+function renderContainer(id) {
+    ss1_DOM.innerHTML += `<div class="container-4" id="${id}"></div>`
+}
+
+Generate('.list', array);
+
+categories.forEach(item => {
+    renderContainer(item.id);
+    renderInsideElement(item.id);
+})
+
+ss1_DOM.innerHTML = ss1_DOM.innerHTML + `<button class="button-2">More Article</button>`
