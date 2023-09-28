@@ -83,6 +83,7 @@ function validate(element_selector_index, type) {
                     //console.log('Thoa man');
                 } else {
                     generateToast('fail');
+                    DOM_fake.className += ' invalid';
                     setTimeout(() => {
                         toast_list_DOM.removeChild(toast_list_DOM.children[0]);
                     }, 5000);
