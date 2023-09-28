@@ -254,6 +254,15 @@ button:active {
     display: flex;
     font-size: 20px;
     align-items: center;
+    border-radius: 8px;
+    padding: 0px 10px;
+}
+.see-all:hover {
+    box-shadow: 3px 3px 13px  rgb(228, 228, 228);
+    cursor: pointer;
+}
+.see-all:active {
+    background: #ececec;
 }
 .arrow {
     position: absolute;
@@ -374,6 +383,9 @@ button:active {
     justify-content: space-between;
     display: flex;
     flex-direction: column;
+}
+.cards-2:hover {
+    cursor: pointer;
 }
 
 .imgs-container {
@@ -572,7 +584,7 @@ button:active {
     flex-direction: column;
     gap: 20px;
     position: fixed;
-    top: 150px;
+    top: 120px;
     right: 10px;
 }
 

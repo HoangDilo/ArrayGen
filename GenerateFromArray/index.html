@@ -25,7 +25,7 @@
     </div>
     <div class="header">
         <div class="container-1">
-            <div class="logo">
+            <div class="logo" onclick="goTop()">
                 <div class="text-1">Dasteen</div>
                 <div class="text-2">.Blog</div>
             </div>
@@ -60,7 +60,7 @@
                     </div>
                 </div>
                 <div class="email-form">
-                    <input type="text" name="" class="email" placeholder="Enter your email here..." onfocus="handleFocus(this, 'email')">
+                    <input type="text" name="" class="email" placeholder="Enter your email here..." oninput="handleFocus(this, 'email')">
                     <button onclick="validate(0, 'email')">Subscribe</button>
                 </div>
             </div>
@@ -461,7 +461,7 @@
                 <p class="title-4">Subscribe to newsletter and never miss the new post every week.</p>
             </div>
             <div class="email-form">
-                <input type="text" name="" class="email" placeholder="Enter your email here..." onfocus="handleFocus(this, 'email')">
+                <input type="text" name="" class="email" placeholder="Enter your email here..." oninput="handleFocus(this, 'email')">
                 <button onclick="validate(1, 'email')">Subscribe</button>
             </div>
         </div>
