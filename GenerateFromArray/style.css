@@ -20,8 +20,8 @@ p {
 }
 
 button {
-    border: none;
     background: #6246EA;
+    border: none;
 }
 
 button:hover {
@@ -164,10 +164,10 @@ button:active {
     background-color: black;
 }
 
-#email {
+.email {
     width: 444px;
     padding: 21px 25px;
-    border: 0;
+    border: 2px solid white;
     border-radius: 8px;
     font-size: 20px;
 }
@@ -183,6 +183,7 @@ button:active {
 }
 .email-form > input {
     height: 67px;
+    text-transform: none;
 }
 .email-form > button {
     padding: 20px 23px 19px 23px;
@@ -549,4 +550,56 @@ button:active {
 .container-container-6 {
     width: 1250px;
     padding-bottom: 26px;
+}
+
+.toast-message-list {
+    display: flex;
+    align-items: end;
+    z-index: 5;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    top: 150px;
+    right: 10px;
+}
+
+.toast-message {
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    gap: 20px;
+    height: 60px;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 500;
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 5px 5px;
+    max-width: fit-content;
+    animation: fadein 0.5s, fadeout 0.5s 3.5s;
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.toast-fail {
+    background: rgb(255, 0, 0);
+}
+
+.toast-success {
+    background: rgb(0, 183, 0);
+}
+
+.toast-message > div {
+    text-transform: none;
+}
+
+.invalid {
+    border: 2px solid red;
 }

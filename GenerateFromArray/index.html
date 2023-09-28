@@ -46,8 +46,8 @@
                     </div>
                 </div>
                 <div class="email-form">
-                    <input type="text" name="" id="email" placeholder="Enter your email here...">
-                    <button>Subscribe</button>
+                    <input type="text" name="" class="email" placeholder="Enter your email here..." onfocus="handleFocus(this, 'email')">
+                    <button onclick="validate(0, 'email')">Subscribe</button>
                 </div>
             </div>
             <div class="frame-2">
@@ -447,8 +447,8 @@
                 <p class="title-4">Subscribe to newsletter and never miss the new post every week.</p>
             </div>
             <div class="email-form">
-                <input type="text" name="" id="email" placeholder="Enter your email here...">
-                <button>Subscribe</button>
+                <input type="text" name="" class="email" placeholder="Enter your email here..." onfocus="handleFocus(this, 'email')">
+                <button onclick="validate(1, 'email')">Subscribe</button>
             </div>
         </div>
     </div>
@@ -521,7 +521,14 @@
                 <p>Made With ❤️ Jakarta, Indonesia</p>
             </div>
         </div>
-
+    </div>
+    <div class="toast-message-list">
+        <!-- <div class="toast-message">
+            <img src="./Assets/x.svg" alt="">
+            <div>
+                this is a toast mes
+            </div>
+        </div> -->
     </div>
     <script src="script.js"></script>
 </body>
