@@ -8,24 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body onscroll="handleScroll()">
-    <div id="go-to-top" class="hidden">
-        <div onclick="goTop()">
-            <svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 512 512">! Font Awesome Free 6.4.2 by
-                @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License)
-                Copyright 2023 Fonticons, Inc.<style>
-                    svg {
-                        fill: rgb(89, 61, 228)
-                    }
-                </style>
-                <path
-                    d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM135.1 217.4c-4.5 4.2-7.1 10.1-7.1 16.3c0 12.3 10 22.3 22.3 22.3H208v96c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32V256h57.7c12.3 0 22.3-10 22.3-22.3c0-6.2-2.6-12.1-7.1-16.3L269.8 117.5c-3.8-3.5-8.7-5.5-13.8-5.5s-10.1 2-13.8 5.5L135.1 217.4z" />
-            </svg>
-        </div>
-    </div>
+<body>
     <div class="header">
         <div class="container-1">
-            <div class="logo" onclick="goTop()">
+            <div class="logo">
                 <div class="text-1">Dasteen</div>
                 <div class="text-2">.Blog</div>
             </div>
@@ -60,8 +46,8 @@
                     </div>
                 </div>
                 <div class="email-form">
-                    <input type="text" name="" class="email" placeholder="Enter your email here..." oninput="handleFocus(this, 'email')">
-                    <button onclick="validate(0, 'email')">Subscribe</button>
+                    <input type="text" name="" id="email" placeholder="Enter your email here...">
+                    <button>Subscribe</button>
                 </div>
             </div>
             <div class="frame-2">
@@ -99,19 +85,359 @@
         </div>
     </div>
     <div class="session-1">
-        <!-- <div class="container-4" id="featured_article">
-            
+        <div class="container-4">
+            <div class="category-container">
+                <div class="category-title">
+                    <div class="browse-category">
+                        <div>
+                            Featured Article
+                        </div>
+                        <img src="./Assets/line.svg" alt="" style="width: 35px">
+                    </div>
+                    <div class="see-all">
+                        <p>See All Article</p>
+                        <div class="arrow-container">
+                            <img src="./Assets/arrow.svg" alt="" class="arrow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-post">
+                <div class="cards-2">
+                    <div class="imgs-container">
+                        <img src="./Assets/picture_1.svg" alt="" class="img">
+                        <p>Fundamental Of Javascript</p>
+                    </div>
+                    <div class="users">
+                        <img src="./Assets/theauthor.svg" alt="" class="author">
+                        <div class="author-info">
+                            <div class="author-name">
+                                Dasteen
+                            </div>
+                            <div class="date-time">
+                                Jan 10, 2022 <span class="the-other-dots">∙</span> 3 Min Read
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-2">
+                    <div class="imgs-container">
+                        <img src="./Assets/picture_2.svg" alt="" class="img">
+                        <p>Grid CSS make your life easier</p>
+                    </div>
+                    <div class="users">
+                        <img src="./Assets/theauthor.svg" alt="" class="author">
+                        <div class="author-info">
+                            <div class="author-name">
+                                Dasteen
+                            </div>
+                            <div class="date-time">
+                                Jan 10, 2022 <span class="the-other-dots">∙</span> 3 Min Read
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-2">
+                    <div class="imgs-container">
+                        <img src="./Assets/picture_3.svg" alt="" class="img">
+                        <p>Make animated light mode and dark mode toggle with CSS</p>
+                    </div>
+                    <div class="users">
+                        <img src="./Assets/theauthor.svg" alt="" class="author">
+                        <div class="author-info">
+                            <div class="author-name">
+                                Dasteen
+                            </div>
+                            <div class="date-time">
+                                Jan 10, 2022 <span class="the-other-dots">∙</span> 3 Min Read
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-2">
+                    <div class="imgs-container">
+                        <img src="./Assets/picture_4.svg" alt="" class="img">
+                        <p>Make tic tac toe games with react JS</p>
+                    </div>
+                    <div class="users">
+                        <img src="./Assets/theauthor.svg" alt="" class="author">
+                        <div class="author-info">
+                            <div class="author-name">
+                                Dasteen
+                            </div>
+                            <div class="date-time">
+                                Jan 10, 2022 <span class="the-other-dots">∙</span> 3 Min Read
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="container-4" id="CSS">
-            
+        <div class="container-4">
+            <div class="category-container">
+                <div class="category-title">
+                    <div class="browse-category">
+                        <div>
+                            CSS
+                        </div>
+                        <img src="./Assets/line.svg" alt="" style="width: 35px">
+                    </div>
+                    <div class="see-all">
+                        <p>See All Article</p>
+                        <div class="arrow-container">
+                            <img src="./Assets/arrow.svg" alt="" class="arrow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-post">
+                <div class="cards-2">
+                    <div class="imgs-container">
+                        <img src="./Assets/picture_5.svg" alt="" class="img">
+                        <p>Flexbox cSS : Everything you need to know</p>
+                    </div>
+                    <div class="users">
+                        <img src="./Assets/theauthor.svg" alt="" class="author">
+                        <div class="author-info">
+                            <div class="author-name">
+                                Dasteen
+                            </div>
+                            <div class="date-time">
+                                Jan 10, 2022 <span class="the-other-dots">∙</span> 3 Min Read
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-2">
+                    <div class="imgs-container">
+                        <img src="./Assets/picture_2.svg" alt="" class="img">
+                        <p>Grid CSS make your life easier</p>
+                    </div>
+                    <div class="users">
+                        <img src="./Assets/theauthor.svg" alt="" class="author">
+                        <div class="author-info">
+                            <div class="author-name">
+                                Dasteen
+                            </div>
+                            <div class="date-time">
+                                Jan 10, 2022 <span class="the-other-dots">∙</span> 3 Min Read
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-2">
+                    <div class="imgs-container">
+                        <img src="./Assets/picture_7.svg" alt="" class="img">
+                        <p>3 easy way to make div center</p>
+                    </div>
+                    <div class="users">
+                        <img src="./Assets/theauthor.svg" alt="" class="author">
+                        <div class="author-info">
+                            <div class="author-name">
+                                Dasteen
+                            </div>
+                            <div class="date-time">
+                                Jan 10, 2022 <span class="the-other-dots">∙</span> 3 Min Read
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-2">
+                    <div class="imgs-container">
+                        <img src="./Assets/picture_3.svg" alt="" class="img">
+                        <p>Make animated light mode and dark mode toggle with CSS</p>
+                    </div>
+                    <div class="users">
+                        <img src="./Assets/theauthor.svg" alt="" class="author">
+                        <div class="author-info">
+                            <div class="author-name">
+                                Dasteen
+                            </div>
+                            <div class="date-time">
+                                Jan 10, 2022 <span class="the-other-dots">∙</span> 3 Min Read
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="container-4" id="JS">
-            
+        <div class="container-4">
+            <div class="category-container">
+                <div class="category-title">
+                    <div class="browse-category">
+                        <div>
+                            Javascript
+                        </div>
+                        <img src="./Assets/line.svg" alt="" style="width: 35px">
+                    </div>
+                    <div class="see-all">
+                        <p>See All Article</p>
+                        <div class="arrow-container">
+                            <img src="./Assets/arrow.svg" alt="" class="arrow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-post">
+                <div class="cards-2">
+                    <div class="imgs-container">
+                        <img src="./Assets/picture_8.svg" alt="" class="img">
+                        <p>Flexbox cSS : Everything you need to know</p>
+                    </div>
+                    <div class="users">
+                        <img src="./Assets/theauthor.svg" alt="" class="author">
+                        <div class="author-info">
+                            <div class="author-name">
+                                Dasteen
+                            </div>
+                            <div class="date-time">
+                                Jan 10, 2022 <span class="the-other-dots">∙</span> 3 Min Read
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-2">
+                    <div class="imgs-container">
+                        <img src="./Assets/picture_1.svg" alt="" class="img">
+                        <p>Grid CSS make your life easier</p>
+                    </div>
+                    <div class="users">
+                        <img src="./Assets/theauthor.svg" alt="" class="author">
+                        <div class="author-info">
+                            <div class="author-name">
+                                Dasteen
+                            </div>
+                            <div class="date-time">
+                                Jan 10, 2022 <span class="the-other-dots">∙</span> 3 Min Read
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-2">
+                    <div class="imgs-container">
+                        <img src="./Assets/picture_9.svg" alt="" class="img">
+                        <p>3 easy way to make div center</p>
+                    </div>
+                    <div class="users">
+                        <img src="./Assets/theauthor.svg" alt="" class="author">
+                        <div class="author-info">
+                            <div class="author-name">
+                                Dasteen
+                            </div>
+                            <div class="date-time">
+                                Jan 10, 2022 <span class="the-other-dots">∙</span> 3 Min Read
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-2">
+                    <div class="imgs-container">
+                        <img src="./Assets/picture_10.svg" alt="" class="img">
+                        <p>Make animated light mode and dark mode toggle with CSS</p>
+                    </div>
+                    <div class="users">
+                        <img src="./Assets/theauthor.svg" alt="" class="author">
+                        <div class="author-info">
+                            <div class="author-name">
+                                Dasteen
+                            </div>
+                            <div class="date-time">
+                                Jan 10, 2022 <span class="the-other-dots">∙</span> 3 Min Read
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="container-4" id="ReactJS">
-           
-        </div> -->
-        <!-- <button class="button-2">More Article</button> -->
+        <div class="container-4">
+            <div class="category-container">
+                <div class="category-title">
+                    <div class="browse-category">
+                        <div>
+                            React JS
+                        </div>
+                        <img src="./Assets/line.svg" alt="" style="width: 35px">
+                    </div>
+                    <div class="see-all">
+                        <p>See All Article</p>
+                        <div class="arrow-container">
+                            <img src="./Assets/arrow.svg" alt="" class="arrow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-post">
+                <div class="cards-2">
+                    <div class="imgs-container">
+                        <img src="./Assets/picture_11.svg" alt="" class="img">
+                        <p>first month of leaning react jS</p>
+                    </div>
+                    <div class="users">
+                        <img src="./Assets/theauthor.svg" alt="" class="author">
+                        <div class="author-info">
+                            <div class="author-name">
+                                Dasteen
+                            </div>
+                            <div class="date-time">
+                                Jan 10, 2022 <span class="the-other-dots">∙</span> 3 Min Read
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-2">
+                    <div class="imgs-container">
+                        <img src="./Assets/picture_12.svg" alt="" class="img">
+                        <p>build markdown editor with react JS</p>
+                    </div>
+                    <div class="users">
+                        <img src="./Assets/theauthor.svg" alt="" class="author">
+                        <div class="author-info">
+                            <div class="author-name">
+                                Dasteen
+                            </div>
+                            <div class="date-time">
+                                Jan 10, 2022 <span class="the-other-dots">∙</span> 3 Min Read
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-2">
+                    <div class="imgs-container">
+                        <img src="./Assets/picture_13.svg" alt="" class="img">
+                        <p>3 easy way to make div center</p>
+                    </div>
+                    <div class="users">
+                        <img src="./Assets/theauthor.svg" alt="" class="author">
+                        <div class="author-info">
+                            <div class="author-name">
+                                Dasteen
+                            </div>
+                            <div class="date-time">
+                                Jan 10, 2022 <span class="the-other-dots">∙</span> 3 Min Read
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-2">
+                    <div class="imgs-container">
+                        <img src="./Assets/picture_4.svg" alt="" class="img">
+                        <p>Make tic tac toe games with react JS</p>
+                    </div>
+                    <div class="users">
+                        <img src="./Assets/theauthor.svg" alt="" class="author">
+                        <div class="author-info">
+                            <div class="author-name">
+                                Dasteen
+                            </div>
+                            <div class="date-time">
+                                Jan 10, 2022 <span class="the-other-dots">∙</span> 3 Min Read
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="button-2">More Article</button>
     </div>
     <div class="session-2">
         <div class="container-5">
@@ -121,88 +447,76 @@
                 <p class="title-4">Subscribe to newsletter and never miss the new post every week.</p>
             </div>
             <div class="email-form">
-                <input type="text" name="" class="email" placeholder="Enter your email here..." oninput="handleFocus(this, 'email')">
-                <button onclick="validate(1, 'email')">Subscribe</button>
+                <input type="text" name="" id="email" placeholder="Enter your email here...">
+                <button>Subscribe</button>
             </div>
         </div>
     </div>
     <div class="session-3">
-        <div class="container-container-6">
-            <div class="container-6">
-                <div class="col-1">
-                    <div class="logo">
-                        <div class="text-1">Dasteen</div>
-                        <div class="text-2">.Blog</div>
-                    </div>
-                    <div class="text-4">
-                        Digitaldastin by Dastin Darmawan
-                    </div>
-                    <div class="brands">
-                        <img src="./Assets/m.svg" alt="" class="brands-1">
-                        <img src="./Assets/bird.svg" alt="">
-                        <img src="./Assets/insta.svg" alt="">
-                        <img src="./Assets/in.svg" alt="">
-                    </div>
+        <div class="container-6">
+            <div class="col-1">
+                <div class="logo">
+                    <div class="text-1">Dasteen</div>
+                    <div class="text-2">.Blog</div>
                 </div>
-                <div class="col-2">
-                    <div class="cols">
-                        <div class="col-title">
-                            CATEGORY
-                        </div>
-                        <div class="col-list">
-                            <p>CSS</p>
-                            <p>Javascript</p>
-                            <p>Tailwind</p>
-                            <p>ReactJS</p>
-                            <p>More Catagory</p>
-                        </div>
-                    </div>
-                    <div class="cols">
-                        <div class="col-title">
-                            ABOUT ME
-                        </div>
-                        <div class="col-list">
-                            <p>About Me</p>
-                            <p>Projects</p>
-                            <p>Achievement</p>
-                        </div>
-                    </div>
-                    <div class="cols">
-                        <div class="col-title">
-                            GET IN TOUCH
-                        </div>
-                        <div class="col-list">
-                            <p>+62-8XXX-XXX-XX</p>
-                            <p>demo@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="cols">
-                        <div class="col-title">
-                            FOLLOW US
-                        </div>
-                        <div class="col-list">
-                            <p>Medium</p>
-                            <p>Instagram</p>
-                            <p>Twitter</p>
-                            <p>Facebook</p>
-                        </div>
-                    </div>
+                <div class="text-4">
+                    Digitaldastin by Dastin Darmawan
+                </div>
+                <div class="brands">
+                    <img src="./Assets/m.svg" alt="" class="brands-1">
+                    <img src="./Assets/bird.svg" alt="">
+                    <img src="./Assets/insta.svg" alt="">
+                    <img src="./Assets/in.svg" alt="">
                 </div>
             </div>
-            <div class="line-1"></div>
-            <div class="final-content">
-                <p>© 2022 Digitaldastin</p>
-                <p>Made With ❤️ Jakarta, Indonesia</p>
+            <div class="col-2">
+                <div class="cols">
+                    <div class="col-title">
+                        CATEGORY
+                    </div>
+                    <div class="col-list">
+                        <p>CSS</p>
+                        <p>Javascript</p>
+                        <p>Tailwind</p>
+                        <p>ReactJS</p>
+                        <p>More Catagory</p>
+                    </div>
+                </div>
+                <div class="cols">
+                    <div class="col-title">
+                        ABOUT ME
+                    </div>
+                    <div class="col-list">
+                        <p>About Me</p>
+                        <p>Projects</p>
+                        <p>Achievement</p>
+                    </div>
+                </div>
+                <div class="cols">
+                    <div class="col-title">
+                        GET IN TOUCH
+                    </div>
+                    <div class="col-list">
+                        <p>+62-8XXX-XXX-XX</p>
+                        <p>demo@gmail.com</p>
+                    </div>
+                </div>
+                <div class="cols">
+                    <div class="col-title">
+                        FOLLOW US
+                    </div>
+                    <div class="col-list">
+                        <p>Medium</p>
+                        <p>Instagram</p>
+                        <p>Twitter</p>
+                        <p>Facebook</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="toast-message-list">
-        <!-- <div class="toast-message">
-            <img src="./Assets/x.svg" alt="">
-            <div>
-                this is a toast mes
-            </div>
-        </div> -->
+        <div class="line-1">
+
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

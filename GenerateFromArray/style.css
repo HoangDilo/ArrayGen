@@ -15,26 +15,13 @@ body {
     margin: 0;
 }
 
-#go-to-top.hidden {
-    visibility: hidden;
-}
-#go-to-top {
-    padding: 0;
-    margin: 0;
-    border-radius: 8px;
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 10;
-}
-
 p {
     margin: 0;
 }
 
 button {
-    background: #6246EA;
     border: none;
+    background: #6246EA;
 }
 
 button:hover {
@@ -80,7 +67,7 @@ button:active {
     background: #EFF0F3;
     justify-content: center;
     padding: 24px 0;
-    box-shadow: 0px 5px 10px rgba(104, 104, 104, 0.2);
+    box-shadow: 0px 5px 10px rgb(228, 228, 228);
 }
 
 .container-1 {
@@ -177,10 +164,10 @@ button:active {
     background-color: black;
 }
 
-.email {
+#email {
     width: 444px;
     padding: 21px 25px;
-    border: 2px solid white;
+    border: 0;
     border-radius: 8px;
     font-size: 20px;
 }
@@ -196,7 +183,6 @@ button:active {
 }
 .email-form > input {
     height: 67px;
-    text-transform: none;
 }
 .email-form > button {
     padding: 20px 23px 19px 23px;
@@ -254,15 +240,6 @@ button:active {
     display: flex;
     font-size: 20px;
     align-items: center;
-    border-radius: 8px;
-    padding: 0px 10px;
-}
-.see-all:hover {
-    box-shadow: 3px 3px 13px  rgb(228, 228, 228);
-    cursor: pointer;
-}
-.see-all:active {
-    background: #ececec;
 }
 .arrow {
     position: absolute;
@@ -384,9 +361,6 @@ button:active {
     display: flex;
     flex-direction: column;
 }
-.cards-2:hover {
-    cursor: pointer;
-}
 
 .imgs-container {
     display: flex;
@@ -499,6 +473,7 @@ button:active {
     padding-top: 70px;
     display: flex;
     justify-content: center;
+    text-transform: none;
     flex-direction: column;
     align-items: center;
 }
@@ -519,7 +494,6 @@ button:active {
 .text-4 {
     font-size: 18px;
     color: #2B2C34;
-    text-transform: none;
 }
 
 .brands {
@@ -538,93 +512,21 @@ button:active {
     flex-direction: column;
     gap: 25px;
     align-items: flex-start;
-    text-transform: none;
 }
 
 .col-title {
     font-size: 20px;
     font-weight: 700;
-    min-width: fit-content;
-    text-transform: none;
 }
 
 .col-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    font-size: 18px;
 }
-.col-list > p {
-    text-transform: none;
 
-}
 .line-1 {
     width: 1250px;
     height: 1px;
     background: #C0C0C0;
-    margin-bottom: 26px;
-}
-
-.final-content {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-}
-
-.container-container-6 {
-    width: 1250px;
-    padding-bottom: 26px;
-}
-
-.toast-message-list {
-    display: flex;
-    align-items: end;
-    z-index: 5;
-    flex-direction: column;
-    gap: 20px;
-    position: fixed;
-    top: 120px;
-    right: 10px;
-}
-
-.toast-message {
-    display: flex;
-    align-items: center;
-    padding: 0px 20px;
-    gap: 20px;
-    height: 60px;
-    border-radius: 12px;
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    font-weight: 500;
-    box-shadow: rgba(0, 0, 0, 0.3) 2px 5px 10px;
-    max-width: fit-content;
-    animation: fadein 0.5s, fadeout 0.5s 4.5s;
-}
-
-@keyframes fadein {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes fadeout {
-    from {opacity: 1;}
-    to {opacity: 0;}
-}
-
-.toast-fail {
-    background: rgb(255, 0, 0);
-}
-
-.toast-success {
-    background: rgb(0, 183, 0);
-}
-
-.toast-message > div {
-    text-transform: none;
-}
-
-.invalid {
-    border: 2px solid red;
 }
